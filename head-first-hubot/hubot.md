@@ -256,8 +256,6 @@ HUBOT_SLACK_TEAM:    wed-ben
 HUBOT_SLACK_TOKEN:   <token>
 ```
 
-* Slack 側の Hubot URL を `heroku open` で確認して追加
-
 ---
 class: center middle
 # いざ動作確認
@@ -278,7 +276,7 @@ module.exports = (robot) ->
                           .get()
     request (err, res, body) ->
       json = JSON.parse body
-      msg.send json.response.prefecture
+      msg.send json.response.prefecture.join ','
 ```
 
 ちょっと CoffeeScript 解説します。
