@@ -14,13 +14,11 @@ class: center middle
 * 作者は New York Times のエンジニア、Jeremy Ashkenas
 
 ---
-class: center top
 # この人
 
 ![Jeremy Ashkenas](http://b.vimeocdn.com/ts/441/643/441643406_1280.jpg)
 
 ---
-class: center middle
 # この人は他にも
 
 * Underscore.js
@@ -41,7 +39,34 @@ class: center middle
 * JavaScript よりも誰が書いても書き方がブレない
 
 ```coffeescript
+# Assignment:
+number   = 42
+opposite = true
 
+# Conditions:
+number = -42 if opposite
+
+# Functions:
+square = (x) -> x * x
+
+# Arrays:
+list = [1, 2, 3, 4, 5]
+
+# Objects:
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -> x * square x
+
+# Splats:
+race = (winner, runners...) ->
+  print winner, runners
+
+# Existence:
+alert "I knew it!" if elvis?
+
+# Array comprehensions:
+cubes = (math.cube num for num in list)
 ```
 ---
 class: center middle
@@ -61,7 +86,7 @@ class: center middle
 class: center middle
 # それでは GO
 
---
+---
 # まずコメント
 
 ```coffeescript
@@ -279,7 +304,7 @@ a = if b then 1 else 2
 ```
 
 ---
-# 演算子他にも
+# 演算子　他
 
 | JavaScript | CoffeeScript |
 | ---------- | ------------ |
@@ -287,7 +312,7 @@ a = if b then 1 else 2
 | !== | isnt |
 | ! | not |
 | && | and |
-| || | or |
+| `||` | or |
 | true | true,yes,on |
 | false | false,no,off |
 | of | in |
@@ -346,7 +371,8 @@ for v, i in array by -1
   console.log "i = " + i + " v = " + v
 ```
 
---
+---
+# for文
 
 ```coffeescript
 # 配列のループ
@@ -377,7 +403,8 @@ for value,i in array
   console.log "i=" + i + ",value = " + value
 ```
 
---
+---
+# for文
 
 ```coffeescript
 # 一行for
