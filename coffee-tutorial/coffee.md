@@ -38,6 +38,9 @@ class: center middle
 * 記述量が減ってすっきりして読みやすい
 * JavaScript よりも誰が書いても書き方がブレない
 
+---
+# こんな感じ
+
 ```coffeescript
 # Assignment:
 number   = 42
@@ -222,12 +225,6 @@ obj2 =
 
 ```coffeescript
 # 関数の引数として適用することもできる
-###
-func({
-  a: 1,
-  b: 2
-})
-###
 func
   a: 1
   b: 2
